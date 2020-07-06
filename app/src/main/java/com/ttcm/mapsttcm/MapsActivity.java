@@ -62,18 +62,6 @@ public class MapsActivity extends FragmentActivity implements
     private LocationRequest locationRequest;
     private Location lastLocation;
 
-    private LocationCallback locationCallback = new LocationCallback(){
-        @Override
-        public void onLocationResult(LocationResult locationResult) {
-            if (locationResult == null){
-                return;
-            }
-            for (Location location: locationResult.getLocations()){
-                Log.v("IGA", location.toString());
-            }
-        }
-    };
-
     private Marker currentMarker;
     private FusedLocationProviderClient fusedLocationProviderClient;
     private static final int Request_User_Location_Code = 99;
